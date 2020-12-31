@@ -3,7 +3,7 @@ import '../../css/style.css';
 
 const hero = () => {
 	return (
-		<div className="header">
+		<header className="header">
 			<div className="header__text-box">
 				<h1 className="heading-primary">
 					<span className="heading-primary--main">Owl of Minerva</span>
@@ -15,7 +15,7 @@ const hero = () => {
 					</a>
 				</div>
 			</div>
-		</div>
+		</header>
 	);
 };
 

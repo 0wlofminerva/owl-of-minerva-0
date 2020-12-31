@@ -14,10 +14,10 @@ function App() {
 		<Fragment>
 			<Header />
 
-			<main className="py-3">
-				<Container>
-					<Hero />
-				</Container>
+			<Hero />
+
+			<main className="">
+				<Container></Container>
 			</main>
 			<Footer />
 		</Fragment>

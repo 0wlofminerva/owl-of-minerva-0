@@ -1,12 +1,20 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
+import { ReactComponent as Logo } from '../../img/logo.svg';
+
 const Header = () => {
 	return (
 		<header>
-			<Navbar bg="dark" variant="dark" expand="lg" CollapseOnSelect>
+			<Navbar className="bg-dark-blue" expand="lg" CollapseOnSelect>
 				<Container>
-					<Navbar.Brand href="/">Owl of Minerva</Navbar.Brand>
+					<Navbar.Brand href="#home">
+						<div className="owlfominerva-brand">
+							<Logo className="header__logo d-inline-blocks" />
+							{/* <p className="wordmark d-inline-block">Owl of Minerva</p>*/}
+						</div>
+					</Navbar.Brand>
+
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="ml-auto">

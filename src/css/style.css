@@ -46,7 +46,7 @@ font-weight: 400;
 /* font-size: 16px; */
 line-height: 1.7;
 color: #1a1832;
-padding: 3rem;
+/* padding: 3rem; */
 /* padding applied to the entire webpage */
 }
 
@@ -69,6 +69,7 @@ padding: 3rem;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
+/* To adapt */
 .header__logo-box{
 position: absolute;
 top: 4rem; /**/
@@ -77,6 +78,7 @@ left: 4rem; /**/
 /* the reference to start counting 40px to the top & left is the parent elment header with position relative */
 }
 
+/* To adapt */
 .header__logo {
 height: 5rem;
 }
@@ -284,3 +286,52 @@ padding: 0 2rem;
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 201231 */
+
+.wordmark {
+    font-size: 2.4rem;
+}
+
+.owlfominerva-brand {
+    display: inline-block;
+    /* model-box works as a modal block */
+}
+
+.bg-dark-blue  {
+    background-color: #1a1832;
+
+}
