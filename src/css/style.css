@@ -1,0 +1,286 @@
+/* OM */
+
+/*
+COLORS:
+
+White: #fff 
+Medium orange: #f49731 
+Dark blue: #1a1832
+
+*/
+
+/* typography */
+
+/* font-family: 'Cinzel',
+    serif;
+
+    font-family: 'Cinzel Decorative',
+    cursive; */
+
+/* The Universal selector select each & every elment in the page & apply this declaration to it */
+*,
+*::after,
+*::before {
+    margin: 0; 
+    padding: 0;
+    /* Start clean without any default browser margings or paddings */
+    /* box-sizing: border-box; */
+    /* Change the box model, so that the borders & the paddiings are no longer edited to the widtth or the totla height that are specified for a box
+    so that without any paddings & borders are edited to the height & width of an element,
+    helpful for getting rid of that behaviour */
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Font properties for the entire website */
+/* in the body selector */
+/* becasue the properties of font are uusually inherited
+so we are using the power of inheritance here */
+body{
+/* font-family: "Lato", sans-serif; */
+font-family: 'Cinzel', serif;
+font-weight: 400;
+/* font-size: 16px; */
+line-height: 1.7;
+color: #1a1832;
+padding: 3rem;
+/* padding applied to the entire webpage */
+}
+
+/* this code performs a basic reset, and also a font weight definitions, in the body selector, it will be inherited in the child elements */
+
+.header {
+    height: 95vh;
+    /* every point of the height should be 95% of the viewport height */
+    background-image: linear-gradient(
+        to left top,
+        #f4973180,
+        #1a183250),
+        url(../img/hero.jpg); /* Specify Owl Color Palette & dierction  & opacity */
+    background-size: cover;
+    /* whatever the width of the viewport of the element it tries to fit the elment iinside of the box */
+    background-position: top; /* change to center Owl */
+    /* whatever the viweport size is, this img always stays at the top of the container */
+    position: relative; /*The origin reference from which top & left of logo-box start to count*/
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box{
+position: absolute;
+top: 4rem; /**/
+left: 4rem; /**/
+/* to put exactly the image where we want it to be, top, bottoom, left, right */
+/* the reference to start counting 40px to the top & left is the parent elment header with position relative */
+}
+
+.header__logo {
+height: 5rem;
+}
+
+/* .logo:hover {
+    animation: moveInRight 1s ease-out;
+} */
+
+.header__text-box {
+    position: absolute;
+    /* in the middle of the header */
+    top: 40%;
+    left: 50%; /* of the parent element */
+    transform: translate(-50%, -50%); /* no longer from parent element but from the elment itself */
+    text-align: center; /* center the text inside of the box & the btn */
+}
+
+.heading-primary{
+color:#fff;
+text-transform: uppercase;
+
+backface-visibility: hidden;
+margin-bottom: 6rem;
+}
+
+.heading-primary--main{
+display:block;
+/* it creates line breaks after & before them */
+font-size: 5rem;
+font-weight: 400;
+/* letter-spacing: .5rem; */
+letter-spacing: .66rem;
+
+animation-name: moveInTop;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+
+
+/* animation-delay: 3s; */
+/* animation-iteration-count: 3; */
+/* animation-timing-function: ease-in; */
+
+line-height: .8;
+
+padding: 0 2rem;
+
+}
+
+.heading-primary--sub{
+    display: block;
+    /* font-size: .85rem; */
+    font-size: 1rem;
+    /* font-weight: 700; */
+    font-weight: 900;
+    /* letter-spacing: .7rem; */
+    letter-spacing: 2.2rem;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform:uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block; /* model-box works as a modal block */
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #1a1832;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+/* @media (max-width: 1260px) {
+    .heading-primary-sub {
+        font-size: .66rem;
+    }
+} */
+
+@media (max-width: 1111px) {
+    .heading-primary-sub {
+        font-size: .75rem;
+    }
+}
+
